@@ -1,0 +1,41 @@
+server:
+  port: 8086
+
+file:
+  upload-dir: C:\Users\SamNar\Desktop
+
+spring:
+  datasource:
+    driverClassName: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/hr_management
+    username: root
+    password: Galata97
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+  app:
+    jwt:
+      secret: api
+      exp: 60*1000
+
+
+  #smtp mail properties
+
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: samiraeyyubova08@gmail.com
+    password: ssbowyqyuuwetsey
+
+    properties.mail.smtp:
+      auth: true
+      starttls.enable: true
+
+  # File Upload Properties
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      enabled: true
